@@ -1,0 +1,78 @@
+<div class="site-content">
+  <div class="site-header header-collapsed">
+    <div class="container">
+      <div class="header-bar">
+        <a href="/" class="branding">
+                <img src="assets/images/logo.png" alt="" class="logo">
+                <h1 class="site-title">St. Patrick's Church</h1>
+            </a>
+
+        <!-- Default snippet for navigation -->
+        <div class="main-navigation">
+          <button type="button" class="menu-toggle" (click)="toggleMobileNav()"><i class="fa fa-bars"></i></button>
+          <ul class="menu">
+            <li class="menu-item current-menu-item"><a (click)="goTo($event)" href="#about">About us</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#pastors">Pastors</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#events">Events</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#seremons">Seremons</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#families">Families</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#contact">Contact</a></li>
+          </ul>
+          <!-- .menu -->
+        </div>
+        <!-- .main-navigation -->
+
+        <div class="mobile-navigation" style="display: none;">
+          <ul class="menu">
+            <li class="menu-item current-menu-item"><a (click)="goTo($event)" href="#about">About us</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#pastors">Pastors</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#events">Events</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#seremons">Seremons</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#families">Families</a></li>
+            <li class="menu-item"><a (click)="goTo($event)" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .site-header -->
+
+  <div class="hero">
+    <ul class="slides">
+      <li style="background-image: url(assets/images/slider-1.jpg)">
+        <div class="container">
+          <div class="slide-content">
+            <h1 class="slide-title">Annual families meeting</h1>
+            <small class="date">11 - 13 April 2014</small>
+            <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+              corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            <a href="#" class="button">Get more information</a>
+          </div>
+        </div>
+      </li>
+
+      <li style="background-image: url(assets/images/slider-1.jpg)">
+        <div class="container">
+          <div class="slide-content">
+            <h1 class="slide-title">Annual families meeting</h1>
+            <small class="date">11 - 13 April 2014</small>
+            <p>Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+              corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            <a href="#" class="button">Get more information</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <main class="main-content">
+    <app-about></app-about>
+    <app-pastors></app-pastors>
+    <app-events></app-events>
+    <app-seremons></app-seremons>
+    <app-families></app-families>
+    <app-contact></app-contact>
+
+    <div class="map" data-latitude="-6.897789" data-longitude="107.621735"></div>
+  </main>
+</div>
