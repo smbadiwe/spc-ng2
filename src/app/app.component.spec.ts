@@ -1,12 +1,21 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { EventsComponent } from './events/events.component';
+import { PastorsComponent } from './pastors/pastors.component';
+import { SeremonsComponent } from './seremons/seremons.component';
+import { FamiliesComponent } from './families/families.component';
+import { PageNotFoundComponent } from './404/404.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent, AboutComponent, ContactComponent, EventsComponent, PastorsComponent,
+        FamiliesComponent, SeremonsComponent,
+        PageNotFoundComponent
       ],
     }).compileComponents();
   }));
@@ -27,6 +36,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('h1').textContent).toContain('St. Patrick\'s Church');
   }));
 });

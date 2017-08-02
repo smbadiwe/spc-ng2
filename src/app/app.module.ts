@@ -8,7 +8,7 @@ import { EventsComponent } from './events/events.component';
 import { PastorsComponent } from './pastors/pastors.component';
 import { SeremonsComponent } from './seremons/seremons.component';
 import { FamiliesComponent } from './families/families.component';
-import { PageNotFoundComponent } from './404/page-not-found.component';
+import { PageNotFoundComponent } from './404/404.component';
 import { routing } from './app.routing';
 @NgModule({
   declarations: [
