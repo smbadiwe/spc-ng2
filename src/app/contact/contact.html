@@ -10,20 +10,35 @@
             <span><img src="assets/images/icon-envelope.png" alt="" class="icon"> contact@patrichchurch.com</span>
         </div>
 
-        <form class="contact-form">
+        <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="contact-form" novalidate>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="control"><input type="text" placeholder="Your name..."><img src="assets/images/icon-user.png" alt="" class="icon"></div>
-                    <div class="control"><input type="text" placeholder="Email..."><img src="assets/images/icon-email.png" alt="" class="icon"></div>
-                    <div class="control"><input type="text" placeholder="Website..."><img src="assets/images/icon-globe.png" alt="" class="icon"></div>
+                    <div class="control"><input formControlName="name" placeholder="Your name..." required><img src="assets/images/icon-user.png"
+                            alt="" class="icon">
+                        <div *ngIf="formErrors.name" class="alert alert-danger">
+                            {{ formErrors.name }}
+                        </div>
+                    </div>
+                    <div class="control"><input formControlName="email" placeholder="Email..." required><img src="assets/images/icon-email.png"
+                            alt="" class="icon">
+                        <div *ngIf="formErrors.email" class="alert alert-danger">
+                            {{ formErrors.email }}
+                        </div>
+                    </div>
+                    <div class="control"><input formControlName="website" placeholder="Website..."><img src="assets/images/icon-globe.png" alt=""
+                            class="icon"></div>
                 </div>
                 <div class="col-md-6">
                     <div class="control">
-                        <textarea name="" placeholder="Your message..."></textarea>
+                        <textarea formControlName="message" placeholder="Your message..." required></textarea>
                         <img src="assets/images/icon-pen.png" alt="" class="icon">
+
+                        <div *ngIf="formErrors.message" class="alert alert-danger">
+                            {{ formErrors.message }}
+                        </div>
                     </div>
                     <p class="text-right">
-                        <input type="submit" value="Send message">
+                        <input [disabled]="hasErrors" type="submit" value="Send message">
                     </p>
                 </div>
             </div>
